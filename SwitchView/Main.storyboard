@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Osm-Kw-eCU">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
+    </dependencies>
+    <scenes>
+        <!--Blue View-->
+        <scene sceneID="ZI7-VZ-U59">
+            <objects>
+                <viewController storyboardIdentifier="BIDView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4Gt-sR-7iZ" customClass="BlueView" customModule="SwitchView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aMM-7k-aDP"/>
+                        <viewControllerLayoutGuide type="bottom" id="3yD-z7-SFV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5qK-ab-WSB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaT-u0-iba">
+                                <rect key="frame" x="51" y="381" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnClick:" destination="4Gt-sR-7iZ" eventType="touchUpInside" id="qsr-YV-0AB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ddf-sv-fAz">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="9zx-rv-JEs"/>
+                    </navigationItem>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <segue destination="YPF-Qt-cA9" kind="push" id="OwA-nX-i0t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wUE-cC-DSE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="23" y="336"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iOb-Dg-boQ">
+            <objects>
+                <navigationController id="Osm-Kw-eCU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jgX-KX-JMq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="4Gt-sR-7iZ" kind="relationship" relationship="rootViewController" id="FRK-Co-ZZ3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="em0-gH-6Mn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-418" y="336"/>
+        </scene>
+        <!--Yellow View - 返回-->
+        <scene sceneID="zqv-8w-g1G">
+            <objects>
+                <viewController storyboardIdentifier="BlueView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YPF-Qt-cA9" customClass="YellowView" customModule="SwitchView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wKu-0e-8OO"/>
+                        <viewControllerLayoutGuide type="bottom" id="3hH-A8-g1H"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hWF-5G-qXT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMn-Fy-nda">
+                                <rect key="frame" x="111" y="307" width="44" height="30"/>
+                                <state key="normal" title="Yellow">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="back:" destination="YPF-Qt-cA9" eventType="touchUpInside" id="y3l-q2-GGk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="返回" id="o7i-Le-BY0"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="yellowBtn" destination="KMn-Fy-nda" id="f1b-2h-jan"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EMI-4Z-3gs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="481" y="336"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
