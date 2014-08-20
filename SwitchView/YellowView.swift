@@ -24,17 +24,7 @@ class YellowView: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.yellowBtn.setTitle(myClosure, forState: UIControlState.Normal)
-        println(myClosure)
-//        NSNotificationCenter.defaultCenter().addObserver(self, selector:"notificationHandler", name: "yellow", object: nil)
-        // Do any additional setup after loading the view.
-    }
-    func notificationHandler(sender : NSNotification) {
-        println("1")
-
-       // println(sender.object)
-    
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -43,16 +33,5 @@ class YellowView: UIViewController {
     @IBAction func back(sender: AnyObject) {
         self.navigationController.popToRootViewControllerAnimated(true)
     }
-    
-
-    /*
-    // #pragma mark - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

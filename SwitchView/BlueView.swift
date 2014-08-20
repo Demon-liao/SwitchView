@@ -15,7 +15,7 @@ class BlueView: UIViewController {
 ////        super.init(coder: aDecoder)
 //        // Custom initialization
 //    }
-    init(coder aDecoder: NSCoder!)
+    required init(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
     }
@@ -28,29 +28,13 @@ class BlueView: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-//    override func prepareForSegue(segue: UIStoryboardSegue!,sender: AnyObject!){
-//        //super.prepareForSegue(segue, sender: sender)
-//        println(segue.identifier)
-//        if (segue.identifier == "Load View") {
-//            // pass data to next view
-//        }
-//        var msg="dada"
-//        var send:YellowView=segue.destinationViewController as YellowView
-//        send.setValue(msg, forKey: "data")
-//        
-//    }
+
     @IBAction func btnClick(sender: AnyObject) {
         var secondStoryboard:UIStoryboard=UIStoryboard(name: "Main", bundle: nil);
         var blueView : UIViewController=secondStoryboard.instantiateViewControllerWithIdentifier("BlueView") as UIViewController
         let yellow=YellowView()
         yellow.initWithClosure("我草")
-//        self.dismissModalViewControllerAnimated(true)
-//        var dicts:Array=[1,2,3]
-//        NSNotificationCenter.defaultCenter().postNotificationName("yellow", object: "aaa")
-        
         self.navigationController.pushViewController(blueView, animated: true)
-        //self.presentModalViewController(blueView, animated: true)
-        //[self presentModalViewController:[secondStoryboard instantiateInitialViewController] animated:YES];
     }
     
 
